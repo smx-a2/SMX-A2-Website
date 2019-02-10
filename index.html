@@ -1,0 +1,63 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+  <link href="style.css" rel="stylesheet">
+</head>
+<title>Deures SMX A2 </title>
+<body>
+  <div id="center" >
+    <h2 id="title">Deures</h2>
+  </div>
+  <p class="foot">Dando competencia a moddle desde el 10/2/19</p>
+
+</body>
+
+<script>
+  const colors ={
+    M1:"orange",
+    M2:"yellow",
+    M3:"blue",
+    M5:"lighorange",
+    M9:"red",
+    M11:"darkgreen"
+  };
+    var request = new XMLHttpRequest();
+    request.open('GET', 'https://raw.githubusercontent.com/smx-a2/work/master/list.json', true);
+    request.send(null);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            var type = request.getResponseHeader('Content-Type');
+            if (type.indexOf("text") !== 1) {
+                load(request.responseText);
+            }
+        }
+    }
+    function load(json){
+      var info = JSON.parse(json);
+      var i;
+      console.log(info.length);
+      info.forEach((deure) => {
+        show(deure);
+      })
+
+    }
+    function show(deureInfo){
+      var deure = document.createElement('div');
+      deure.setAttribute("class","deure");
+      deure.innerHTML = `
+      <ul>
+        <li>
+          <a class="assign" style=color:`+colors[deureInfo.assign]+`>`+deureInfo.assign+`</a>
+        </li>
+        <li>
+          <a class="descrip">`+deureInfo.descrip+`</a>
+        </li>
+      </ul>
+      <p class="data">`+deureInfo.data+`</p>
+      `;
+      document.getElementById("center").appendChild(deure);
+    }
+</script>
+
+
+</html>

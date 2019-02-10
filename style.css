@@ -1,0 +1,68 @@
+
+#center{
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+  overflow: auto;	
+}
+
+@font-face {
+    font-family: 'product';
+    src: url('fonts/product_sans_regular-webfont.eot');
+    src: url('fonts/product_sans_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/product_sans_regular-webfont.woff2') format('woff2'),
+         url('fonts/product_sans_regular-webfont.woff') format('woff'),
+         url('fonts/product_sans_regular-webfont.ttf') format('truetype'),
+         url('fonts/product_sans_regular-webfont.svg#product_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*{
+	font-family:product;
+}
+#title{
+	font-size: 80px;
+}
+.deure{
+	width: 200px;
+	padding: 5px;
+	min-height:60px;
+	border-top:2px solid gray;
+
+}
+.assign{
+	font-weight: bold;
+	font-size: 20px;
+}
+.descrip{
+	font-size: 20px;
+}
+.data{
+	font-style: italic;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.foot{
+	position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
