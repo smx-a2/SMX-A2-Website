@@ -2,11 +2,12 @@
 #center{
 	position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   padding: 0;
   margin: 0;
   overflow: auto;	
+
 }
 
 @font-face {
@@ -26,6 +27,7 @@
 }
 #title{
 	font-size: 80px;
+	line-height: 0;
 }
 .deure{
 	width: 200px;
@@ -43,6 +45,7 @@
 }
 .data{
 	font-style: italic;
+	font-size: 15px;
 }
 li {
   float: left;
@@ -65,4 +68,37 @@ ul {
   left: 50%;
   top: 90%;
   transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-device-width : 640px) {
+
+		#title{
+			font-size: 200px;
+			line-height: 0;
+		}
+		.deure{
+			width: 500px;
+			padding: 25px;
+			min-height:70px;
+			border-top:3px solid gray;
+
+		}
+		.assign{
+			font-weight: bold;
+			font-size: 40px;
+		}
+		.descrip{
+			font-size: 40px;
+		}
+		.data{
+			font-style: italic;
+			font-size: 35px;
+		}
+		.foot{
+			position: absolute;
+			left: 50%;
+			top: 90%;
+			transform: translate(-50%, -50%);
+			font-size: 30px;
+		}
 }
