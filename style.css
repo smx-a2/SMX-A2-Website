@@ -24,13 +24,14 @@
 }
 *{
 	font-family:product;
+	scroll-behavior: smooth;
 }
 #title{
 	font-size: 80px;
 	line-height: 0;
 }
 .deure{
-	width: 200px;
+	width: 250px;
 	padding: 5px;
 	min-height:60px;
 	border-top:2px solid gray;
@@ -38,6 +39,9 @@
 }
 .assign{
 	font-weight: bold;
+	font-size: 20px;
+}
+.title{
 	font-size: 20px;
 }
 .descrip{
@@ -71,13 +75,15 @@ ul {
 }
 
 @media only screen and (max-device-width : 640px) {
-
+		#loading{
+			font-size: 40px;
+		}
 		#title{
 			font-size: 200px;
 			line-height: 0;
 		}
 		.deure{
-			width: 500px;
+			width: 650px;
 			padding: 25px;
 			min-height:70px;
 			border-top:3px solid gray;
@@ -85,6 +91,9 @@ ul {
 		}
 		.assign{
 			font-weight: bold;
+			font-size: 40px;
+		}
+		.title{
 			font-size: 40px;
 		}
 		.descrip{

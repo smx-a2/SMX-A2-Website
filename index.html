@@ -1,7 +1,9 @@
 <html>
 <head>
+  <meta charset="UTF-8" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
   <link href="style.css" rel="stylesheet">
+  <script src="require.js"></script>
 </head>
 
 <link rel="icon" type="image/png" href="a2.png">
@@ -9,6 +11,7 @@
 <body>
   <div id="center" >
     <h2 id="title">Deures</h2>
+    <p id="loading">Loading...</p>
   </div>
   <p class="foot">Dando competencia a moodle desde el 10/2/19</p>
 
@@ -23,42 +26,16 @@
     M9:"red",
     M11:"darkgreen"
   };
-    var request = new XMLHttpRequest();
-    request.open('GET', 'https://raw.githubusercontent.com/smx-a2/work/master/list.json', true);
-    request.send(null);
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
-            var type = request.getResponseHeader('Content-Type');
-            if (type.indexOf("text") !== 1) {
-                load(request.responseText);
-            }
-        }
-    }
-    function load(json){
-      var info = JSON.parse(json);
-      var i;
-      console.log(info.length);
-      info.forEach((deure) => {
-        show(deure);
-      })
 
-    }
-    function show(deureInfo){
-      var deure = document.createElement('div');
-      deure.setAttribute("class","deure");
-      deure.innerHTML = `
-      <ul>
-        <li>
-          <a class="assign" style=color:`+colors[deureInfo.assign]+`>`+deureInfo.assign+`</a>
-        </li>
-        <li>
-          <a class="descrip">`+deureInfo.descrip+`</a>
-        </li>
-      </ul>
-      <p class="data">`+deureInfo.data+`</p>
-      `;
-      document.getElementById("center").appendChild(deure);
-    }
+
+    requirejs(["https://drive.google.com/uc?export=view&id=17qRQjilEnY_YxJmXG5a20WJ1o9BfpvUe"], function(myData){
+      document.getElementById("loading").remove();
+  for (const key of Object.keys(myData)) {
+    var current = myData[key];
+    
+    document.getElementById("center").innerHTML += "<div class='deure'> <ul><li> <a class='assign' style='color:"+colors[current.assign]+"'>"+current.assign+" → </a> </li> <li><a class='title'>"+current.title+"</a></li> </ul><p class='descrip'>"+current.descrip+"</p><p class='data'>"+current.date+"</p> </div></div>"
+  }
+});
 </script>
 
 
