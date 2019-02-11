@@ -13,7 +13,11 @@
     <h2 id="title">Deures</h2>
     <p id="loading">Loading...</p>
   </div>
-  <p class="foot">Dando competencia a moodle desde el 10/2/19</p>
+  <div class="foot">
+    <p>Dando competencia a moodle desde el 10/2/19</p>
+
+  <a id="source" target="_blank" href="https://github.com/smx-a2/SMX-A2-Website">→ Source Code </a>
+</div>
 
 </body>
 
@@ -33,10 +37,13 @@
   for (const key of Object.keys(myData)) {
     var current = myData[key];
     
-    document.getElementById("center").innerHTML += "<div class='deure'> <ul><li> <a class='assign' style='color:"+colors[current.assign]+"'>"+current.assign+" → </a> </li> <li><a class='title'>"+current.title+"</a></li> </ul><p class='descrip'>"+current.descrip+"</p><p class='data'>"+current.date+"</p> </div></div>"
+    document.getElementById("center").innerHTML += "<div class='deure'> <ul><li> <a class='assign' style='color:"+colors[current.assign]+"'</a>"+current.assign+" → </a> </li> <li><a class='title'>"+current.title+"</a></li> </ul><p class='descrip'>"+current.descrip+"</p><p class='data'>"+current.date+"</p> </div></div>"
   }
 });
+
+
 </script>
+
 
 
 </html>

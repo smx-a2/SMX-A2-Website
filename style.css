@@ -33,7 +33,7 @@
 .deure{
 	width: 250px;
 	padding: 5px;
-	min-height:60px;
+	min-height:5px;
 	border-top:2px solid gray;
 
 }
@@ -73,8 +73,16 @@ ul {
   top: 90%;
   transform: translate(-50%, -50%);
 }
-
+#source{
+	color: black;
+	outline: 0;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	font-size: 15px;
+}
 @media only screen and (max-device-width : 640px) {
+		
 		#loading{
 			font-size: 40px;
 		}
@@ -86,7 +94,7 @@ ul {
 			width: 650px;
 			padding: 25px;
 			min-height:70px;
-			border-top:3px solid gray;
+			border-top:4px solid gray;
 
 		}
 		.assign{
@@ -109,5 +117,8 @@ ul {
 			top: 90%;
 			transform: translate(-50%, -50%);
 			font-size: 30px;
+		}
+		#source{
+			font-size: 35px;
 		}
 }
