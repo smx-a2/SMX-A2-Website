@@ -66,6 +66,7 @@ d-tabs .ripple {
     opacity: 10;
 }
 
+
 @keyframes _button_ripple {
   75% { 
   transform: scale(4); opacity: 0.8;
@@ -255,7 +256,7 @@ d-navbar::-o-scrollbar {display:none;}
 d-navbar::-google-ms-scrollbar {display:none;}
 d-navbar::-khtml-scrollbar {display:none;}
 .activity{
-	background: white;
+	background: var(--LightPrimaryColor);
 	width: 100%;
 	max-height: 100%;
 	box-sizing: border-box;
@@ -477,10 +478,11 @@ d-navbar::-khtml-scrollbar {display:none;}
   }
 }
 div.card{
+  background: #F7F7F7;
   padding: 10px;
   margin: 8px;
-  box-shadow: 0px 4px 5px rgba(0,0,0,0.2);
-  border-radius: 2px;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.4);
+  border-radius: 5px;
   justify-content: left;
   text-align: left;
   max-width: 300px;

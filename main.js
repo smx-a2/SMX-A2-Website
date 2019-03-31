@@ -28,7 +28,7 @@ function Main(){
     newTheme({
         Name : 'dark-p',
         Primary : 'purple',
-        Light: 'lightpink',
+        Light: 'white',
         Secondary: 'red',
         Background: 'purple',
         RippleEffect : 'rgba(0,0,0,0.6)'

@@ -21,7 +21,6 @@ window.onload = function(){
 window.onerror = function(){
 	location.reload();
 }
-
 function load(obj){
 	
 	const act = obj['home'];
