@@ -31,8 +31,7 @@ function Main(){
 		home: HomeAct,
 		style:"default"
 	});
-}
-const colors ={
+	const colors ={
     M1:"rgb(21,193,17)",
     M2:"rgb(221,168,119)",
     M3:"rgb(17,117,238)",
@@ -46,6 +45,8 @@ const colors ={
     document.getElementById("tasks").innerHTML += "<div class='card' onclick='dynamicPage("+JSON.stringify(current)+")' > <ul><li> <a class='assign' style='color:"+colors[current.assign]+"'</a>"+current.assign+" → </a> </li> <li><a class='title'>"+current.title+"</a></li> </ul><p class='descrip'>"+current.descrip+"</p><p class='data'>"+current.date+"</p> </div></div>"
   }
 });
+}
+
 
 function dynamicPage(obj){
 
