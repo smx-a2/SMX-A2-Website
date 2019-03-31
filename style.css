@@ -5,8 +5,9 @@
   top: 40%;
   transform: translate(-50%, -50%);
   padding: 0;
-  margin: 0;
   overflow: auto;	
+  margin: 100px 0px;
+  height: auto;
 
 }
 
@@ -45,7 +46,7 @@
 	font-size: 20px;
 }
 .descrip{
-	font-size: 20px;
+	font-size: 15px;
 }
 .data{
 	font-style: italic;
@@ -68,7 +69,8 @@ ul {
   overflow: hidden;
 }
 .foot{
-	position: absolute;
+	margin:50px 0px;
+	position: relative;
   left: 50%;
   top: 90%;
   transform: translate(-50%, -50%);
@@ -81,44 +83,6 @@ ul {
 	text-align: center;
 	font-size: 15px;
 }
-@media only screen and (max-device-width : 640px) {
-		
-		#loading{
-			font-size: 40px;
-		}
-		#title{
-			font-size: 200px;
-			line-height: 0;
-		}
-		.deure{
-			width: 650px;
-			padding: 25px;
-			min-height:70px;
-			border-top:4px solid gray;
-
-		}
-		.assign{
-			font-weight: bold;
-			font-size: 40px;
-		}
-		.title{
-			font-size: 40px;
-		}
-		.descrip{
-			font-size: 40px;
-		}
-		.data{
-			font-style: italic;
-			font-size: 35px;
-		}
-		.foot{
-			position: absolute;
-			left: 50%;
-			top: 90%;
-			transform: translate(-50%, -50%);
-			font-size: 30px;
-		}
-		#source{
-			font-size: 35px;
-		}
+#tasks{
+	text-align: center;
 }

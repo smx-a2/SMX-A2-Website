@@ -1,49 +1,20 @@
 <html>
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
   <link href="style.css" rel="stylesheet">
+  <link href="dreble.css" rel="stylesheet">
   <script src="require.js"></script>
+  <script src="dreble.js"></script>
+  <script src="main.js"></script>
+
 </head>
 
 <link rel="icon" type="image/png" href="a2.png">
-<title>Deures SMX A2 </title>
-<body>
-  <div id="center" >
-    <h2 id="title">Deures</h2>
-    <p id="loading">Loading...</p>
-  </div>
-  <div class="foot">
-    <p>Dando competencia a moodle desde el 10/2/19</p>
-
-  <a id="source" target="_blank" href="https://github.com/smx-a2/SMX-A2-Website">→ Source Code </a>
-</div>
-
-</body>
-
-<script>
-  const colors ={
-    M1:"rgb(21,193,17)",
-    M2:"rgb(221,168,119)",
-    M3:"rgb(17,117,238)",
-    M5:"rgb(233,201,22)",
-    M9:"red",
-    M11:"darkgreen"
-  };
-
-
-    requirejs(["https://drive.google.com/uc?export=view&id=17qRQjilEnY_YxJmXG5a20WJ1o9BfpvUe"], function(myData){
-      document.getElementById("loading").remove();
-  for (const key of Object.keys(myData)) {
-    var current = myData[key];
-    
-    document.getElementById("center").innerHTML += "<div class='deure'> <ul><li> <a class='assign' style='color:"+colors[current.assign]+"'</a>"+current.assign+" → </a> </li> <li><a class='title'>"+current.title+"</a></li> </ul><p class='descrip'>"+current.descrip+"</p><p class='data'>"+current.date+"</p> </div></div>"
-  }
-});
-
-
-</script>
 
 
 
+<div id="dreble_themes"></div>
 </html>
