@@ -19,9 +19,7 @@ window.onload = function(){
 	Main();
 }
 window.onerror = function(){
-	document.body.innerHTML = `
-	<p style=" font-family: _main_font !important; left:50%; transform: translate(-50%, -45%); top:50%; position:fixed;">An error ocurred!</p>
-	`;
+	location.reload();
 }
 
 function load(obj){
