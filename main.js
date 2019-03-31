@@ -7,7 +7,7 @@ const HomeAct = new activity({name:"Home",code:`
 	</d-navbar>
 	<d-content>
 			<div id="tasks"  content="center">
-					
+					<p id="loading">Loading...</p>
 			</div>
 
 			<p>Dando competencia a moodle desde el 10/2/19</p>
@@ -15,7 +15,14 @@ const HomeAct = new activity({name:"Home",code:`
 	</d-content>
 
 	`});
-
+const colors ={
+    M1:"rgb(21,193,17)",
+    M2:"rgb(221,168,119)",
+    M3:"rgb(17,117,238)",
+    M5:"rgb(233,201,22)",
+    M9:"red",
+    M11:"darkgreen"
+  };
 function Main(){
 
     newTheme({
@@ -31,19 +38,13 @@ function Main(){
 		home: HomeAct,
 		style:"default"
 	});
-	const colors ={
-    M1:"rgb(21,193,17)",
-    M2:"rgb(221,168,119)",
-    M3:"rgb(17,117,238)",
-    M5:"rgb(233,201,22)",
-    M9:"red",
-    M11:"darkgreen"
-  };
+
   requirejs(["https://drive.google.com/uc?export=view&id=17qRQjilEnY_YxJmXG5a20WJ1o9BfpvUe"], function(myData){
   for (const key of Object.keys(myData)) {
     const current = myData[key];
     document.getElementById("tasks").innerHTML += "<div class='card' onclick='dynamicPage("+JSON.stringify(current)+")' > <ul><li> <a class='assign' style='color:"+colors[current.assign]+"'</a>"+current.assign+" → </a> </li> <li><a class='title'>"+current.title+"</a></li> </ul><p class='descrip'>"+current.descrip+"</p><p class='data'>"+current.date+"</p> </div></div>"
   }
+  document.getElementById("loading").remove();
 });
 }
 
